@@ -17,19 +17,19 @@ public class PersonController {
 
     @GetMapping("/persons/by-city")
     public String personByCity(@RequestParam String city) {
-        List<Person> personsByCity = personRepository.findByCity(city);
+        List<Person> personsByCity = personRepository.findByCityJpql(city);
         return personsByCity.toString();
     }
 
     @GetMapping("/persons/by-age-less-than")
     public String personByAgeLessThan(@RequestParam int age) {
-        List<Person> personByAgeLessThan = personRepository.findByPersonIdAgeLessThanOrderByPersonIdAgeAsc(age);
+        List<Person> personByAgeLessThan = personRepository.findByAgeLessJpql(age);
         return personByAgeLessThan.toString();
     }
 
     @GetMapping("/persons/by-name-surname")
     public String findByPersonIdNameAndPersonIdSurname(@RequestParam String name, @RequestParam String surname) {
-        Optional<Person> personsByNameAndSurname = personRepository.findByPersonIdNameAndPersonIdSurname(name, surname);
+        Optional<Person> personsByNameAndSurname = personRepository.findByNameAndSurname(name, surname);
         if (personsByNameAndSurname.isPresent()) {
             return personsByNameAndSurname.toString();
         } else {
