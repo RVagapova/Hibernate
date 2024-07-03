@@ -29,6 +29,6 @@ public class Person {
                 "personId=" + personId +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", city='" + city + '\'' +
-                '}';
+                "}\n";
     }
 }

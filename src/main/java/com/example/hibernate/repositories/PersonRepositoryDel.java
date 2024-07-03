@@ -1,4 +1,4 @@
-package com.example.hibernate.repository;
+package com.example.hibernate.repositories;
 
 import com.example.hibernate.entity.Person;
 import jakarta.persistence.EntityManager;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class PersonRepository {
+public class PersonRepositoryDel {
 
     @PersistenceContext
     private EntityManager entityManager;
