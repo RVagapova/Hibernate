@@ -1,8 +1,8 @@
 package com.example.hibernate.repositories;
 
 import com.example.hibernate.entity.Person;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceContext;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
